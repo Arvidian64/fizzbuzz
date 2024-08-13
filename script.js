@@ -2,8 +2,23 @@ const htmlbutton = document.querySelector("#button")
 
 console.log(htmlbutton)
 
-function FizzBuzz() {
-    console.log("FizzBuzz")
+function FizzBuzz(number) {
+    console.log("FizzBuzz is running");
+    let answer = number;
+    for (let i = 1; i <= answer; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz")
+        }
+        else if (i % 3 === 0) {
+            console.log("Fizz")
+        }
+        else if (i % 5 === 0) {
+            console.log("Buzz")
+        }
+        else {
+            console.log(i);
+        }
+    }
 }
 
 htmlbutton.addEventListener("click", e => {
@@ -11,5 +26,5 @@ htmlbutton.addEventListener("click", e => {
     console.log(inputbox)
     let number = inputbox.value;
     console.log(number)
-    FizzBuzz();
+    FizzBuzz(number);
 })
